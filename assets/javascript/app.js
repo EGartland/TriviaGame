@@ -42,15 +42,14 @@ var game = {
         game.counter--;
         $('#counter-number').html(game.counter);
 
-        if (game.counter == 0) {
+        if (game.counter === 0) {
             console.log('TIME UP');
             game.done();
-            location.reload();
         }
     },
     
     start: function() {
-    
+        
       document.getElementById('play').style.display = 'none';
 
         timer = setInterval(game.countdown, 1000);
@@ -108,10 +107,10 @@ var game = {
             }
         });
 
-    
+     
         this.result();
     },
-    
+   
     result: function() {
 
         clearInterval(timer);
